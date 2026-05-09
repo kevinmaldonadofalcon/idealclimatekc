@@ -98,18 +98,14 @@
     }
 
     .mark {
-      width: 54px;
-      height: 54px;
+      width: 58px;
+      height: 58px;
       border-radius: 18px;
-      display: grid;
-      place-items: center;
-      color: white;
-      font-weight: 950;
-      letter-spacing: -1px;
-      background:
-        linear-gradient(135deg, rgba(255,255,255,.18), transparent 42%),
-        linear-gradient(135deg, var(--red) 0%, #ff7b28 43%, var(--blue) 44%, var(--blue-2) 100%);
-      box-shadow: 0 12px 28px rgba(21, 94, 219, 0.22);
+      object-fit: contain;
+      background: #ffffff;
+      border: 1px solid var(--line);
+      box-shadow: 0 12px 28px rgba(21, 94, 219, 0.16);
+      padding: 4px;
     }
 
     .brand-title {
@@ -796,7 +792,7 @@
     <header class="nav">
       <div class="container nav-inner">
         <a href="#top" class="brand" aria-label="Ideal Climate home">
-          <div class="mark">IC</div>
+          <img class="mark" src="logo.png" alt="Ideal Climate Heating & Cooling logo" />
           <div>
             <div class="brand-title">Ideal Climate</div>
             <div class="brand-sub">HVAC & Refrigeration</div>
@@ -843,9 +839,8 @@
             <div class="hero-card-inner">
               <div class="premium-logo">
                 <div>
-                  <div class="sun-snow">☀️ ❄️</div>
-                  <h2>Ideal Climate</h2>
-                  <p>Heating • Cooling • Refrigeration</p>
+                  <img src="logo.png" alt="Ideal Climate Heating & Cooling logo" style="max-width: 330px; width: 100%; height: auto; display: block; margin: 0 auto; filter: drop-shadow(0 14px 24px rgba(7,17,31,0.15));" />
+                  <p style="margin-top: 14px;">Local HVAC/R service in Kansas City, MO & KS</p>
                 </div>
               </div>
 
