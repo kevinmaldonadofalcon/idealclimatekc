@@ -1,0 +1,568 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ideal Climate HVAC & Refrigeration</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      background: #f5f7fb;
+      color: #0f172a;
+    }
+
+    .page {
+      max-width: 1180px;
+      margin: 0 auto;
+      padding: 24px;
+    }
+
+    .hero {
+      position: relative;
+      overflow: hidden;
+      border-radius: 30px;
+      background: linear-gradient(135deg, #ffffff 0%, #eef5ff 52%, #fff4f0 100%);
+      border: 1px solid #e2e8f0;
+      padding: 44px;
+      box-shadow: 0 18px 45px rgba(15, 23, 42, 0.10);
+    }
+
+    .hero-content {
+      display: grid;
+      grid-template-columns: 1.1fr 0.9fr;
+      gap: 34px;
+      align-items: center;
+    }
+
+    .badge {
+      display: inline-block;
+      padding: 9px 14px;
+      border-radius: 999px;
+      background: #eaf2ff;
+      color: #1d4ed8;
+      font-weight: 700;
+      font-size: 14px;
+      margin-bottom: 18px;
+    }
+
+    h1 {
+      margin: 0;
+      font-size: 54px;
+      line-height: 1.02;
+      letter-spacing: -1.8px;
+      color: #0f172a;
+    }
+
+    .lead {
+      margin-top: 18px;
+      font-size: 19px;
+      line-height: 1.65;
+      color: #475569;
+      max-width: 650px;
+    }
+
+    .buttons {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 28px;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 15px 20px;
+      border-radius: 16px;
+      text-decoration: none;
+      font-weight: 800;
+      transition: 0.2s ease;
+    }
+
+    .btn-primary {
+      background: #0f172a;
+      color: #ffffff;
+    }
+
+    .btn-blue {
+      background: #1d4ed8;
+      color: #ffffff;
+    }
+
+    .btn:hover {
+      transform: translateY(-2px);
+      opacity: 0.92;
+    }
+
+    .trust-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 26px;
+      color: #334155;
+      font-weight: 700;
+      font-size: 14px;
+    }
+
+    .trust-row span {
+      background: rgba(255, 255, 255, 0.85);
+      border: 1px solid #e2e8f0;
+      border-radius: 999px;
+      padding: 9px 12px;
+    }
+
+    .card-preview {
+      background: #ffffff;
+      border: 1px solid #e2e8f0;
+      border-radius: 26px;
+      padding: 24px;
+      box-shadow: 0 14px 35px rgba(15, 23, 42, 0.10);
+    }
+
+    .logo-box {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      margin-bottom: 20px;
+    }
+
+    .mark {
+      width: 58px;
+      height: 58px;
+      border-radius: 50%;
+      background: linear-gradient(90deg, #ef4444 0%, #f97316 45%, #2563eb 55%, #0f4db8 100%);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      font-size: 24px;
+      font-weight: 900;
+      box-shadow: 0 10px 22px rgba(37, 99, 235, 0.18);
+    }
+
+    .logo-title {
+      font-size: 25px;
+      font-weight: 900;
+      line-height: 1;
+    }
+
+    .logo-sub {
+      margin-top: 5px;
+      font-size: 12px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: #64748b;
+      font-weight: 800;
+    }
+
+    .mini-card {
+      border-radius: 20px;
+      background: #f8fafc;
+      border: 1px solid #e2e8f0;
+      padding: 16px;
+      margin-top: 12px;
+    }
+
+    .mini-card strong {
+      display: block;
+      font-size: 16px;
+      margin-bottom: 6px;
+    }
+
+    .mini-card p {
+      margin: 0;
+      color: #64748b;
+      line-height: 1.5;
+      font-size: 14px;
+    }
+
+    .section {
+      padding: 50px 0 0;
+    }
+
+    .section-title {
+      text-align: center;
+      max-width: 760px;
+      margin: 0 auto 30px;
+    }
+
+    .eyebrow {
+      color: #1d4ed8;
+      text-transform: uppercase;
+      letter-spacing: 3px;
+      font-weight: 900;
+      font-size: 13px;
+      margin-bottom: 10px;
+    }
+
+    h2 {
+      margin: 0;
+      font-size: 36px;
+      letter-spacing: -1px;
+    }
+
+    .section-title p {
+      color: #64748b;
+      line-height: 1.65;
+      font-size: 17px;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 16px;
+    }
+
+    .service-card {
+      background: #ffffff;
+      border: 1px solid #e2e8f0;
+      border-radius: 24px;
+      padding: 22px;
+      box-shadow: 0 10px 24px rgba(15, 23, 42, 0.06);
+    }
+
+    .icon {
+      width: 46px;
+      height: 46px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 16px;
+      background: #eaf2ff;
+      color: #1d4ed8;
+      font-size: 22px;
+      margin-bottom: 16px;
+    }
+
+    .service-card h3 {
+      margin: 0 0 10px;
+      font-size: 19px;
+    }
+
+    .service-card p {
+      margin: 0;
+      color: #64748b;
+      line-height: 1.6;
+      font-size: 14px;
+    }
+
+    .about {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 18px;
+      align-items: stretch;
+    }
+
+    .dark-card {
+      background: #0f172a;
+      color: white;
+      border-radius: 28px;
+      padding: 32px;
+      box-shadow: 0 16px 36px rgba(15, 23, 42, 0.18);
+    }
+
+    .dark-card p {
+      color: #cbd5e1;
+      line-height: 1.7;
+      font-size: 17px;
+    }
+
+    .credentials {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 12px;
+      margin-top: 24px;
+    }
+
+    .credential {
+      background: rgba(255,255,255,0.08);
+      border: 1px solid rgba(255,255,255,0.12);
+      border-radius: 18px;
+      padding: 15px;
+    }
+
+    .credential strong {
+      display: block;
+      font-size: 18px;
+    }
+
+    .credential span {
+      color: #cbd5e1;
+      font-size: 12px;
+    }
+
+    .areas {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 10px;
+    }
+
+    .areas span {
+      background: #ffffff;
+      border: 1px solid #e2e8f0;
+      border-radius: 999px;
+      padding: 10px 14px;
+      font-weight: 800;
+      font-size: 14px;
+      color: #334155;
+    }
+
+    .contact-box {
+      background: linear-gradient(135deg, #1d4ed8, #0f172a);
+      color: white;
+      border-radius: 30px;
+      padding: 36px;
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 24px;
+      align-items: center;
+    }
+
+    .contact-box h2 {
+      color: white;
+    }
+
+    .contact-box p {
+      color: #dbeafe;
+      line-height: 1.6;
+    }
+
+    .footer {
+      text-align: center;
+      color: #64748b;
+      padding: 28px 0 8px;
+      font-size: 14px;
+    }
+
+    @media (max-width: 900px) {
+      .hero-content,
+      .about,
+      .contact-box {
+        grid-template-columns: 1fr;
+      }
+
+      .grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      h1 {
+        font-size: 42px;
+      }
+    }
+
+    @media (max-width: 560px) {
+      .page {
+        padding: 14px;
+      }
+
+      .hero {
+        padding: 26px;
+        border-radius: 24px;
+      }
+
+      h1 {
+        font-size: 34px;
+      }
+
+      h2 {
+        font-size: 28px;
+      }
+
+      .grid,
+      .credentials {
+        grid-template-columns: 1fr;
+      }
+
+      .buttons {
+        display: grid;
+      }
+
+      .btn {
+        text-align: center;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="page">
+
+    <section class="hero">
+      <div class="hero-content">
+        <div>
+          <div class="badge">📍 Serving Kansas City, MO & KS</div>
+
+          <h1>Local HVAC service you can count on.</h1>
+
+          <p class="lead">
+            I provide residential and commercial heating, cooling, maintenance, diagnostics, repairs, and refrigeration service across the Kansas City metro area.
+          </p>
+
+          <div class="buttons">
+            <a class="btn btn-primary" href="tel:+19133152795">Call 913-315-2795</a>
+            <a class="btn btn-blue" href="https://wa.me/19133152795" target="_blank">Send WhatsApp</a>
+          </div>
+
+          <div class="trust-row">
+            <span>✓ Honest service</span>
+            <span>✓ Fair pricing</span>
+            <span>✓ Reliable work</span>
+          </div>
+        </div>
+
+        <div class="card-preview">
+          <div class="logo-box">
+            <div class="mark">IC</div>
+            <div>
+              <div class="logo-title">Ideal Climate</div>
+              <div class="logo-sub">Heating & Cooling</div>
+            </div>
+          </div>
+
+          <div class="mini-card">
+            <strong>AC Repair</strong>
+            <p>Cooling diagnostics, electrical troubleshooting, capacitors, contactors, motors, and performance checks.</p>
+          </div>
+
+          <div class="mini-card">
+            <strong>Heating Repair</strong>
+            <p>Furnace and heating service, ignition issues, flame sensors, safety checks, and no-heat calls.</p>
+          </div>
+
+          <div class="mini-card">
+            <strong>Maintenance</strong>
+            <p>Filters, belts, coils, drains, pressures, temperatures, voltage, and amp checks.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="section-title">
+        <div class="eyebrow">Services</div>
+        <h2>Heating, cooling, maintenance & repairs</h2>
+        <p>Straightforward diagnostics and hands-on service for homes and light commercial systems.</p>
+      </div>
+
+      <div class="grid">
+        <div class="service-card">
+          <div class="icon">❄️</div>
+          <h3>AC Repair</h3>
+          <p>No-cooling calls, electrical diagnostics, refrigerant checks, fan motors, capacitors, contactors, and system performance.</p>
+        </div>
+
+        <div class="service-card">
+          <div class="icon">🔥</div>
+          <h3>Heating Repair</h3>
+          <p>Furnace service, ignition issues, flame sensor cleaning, safety checks, and no-heat troubleshooting.</p>
+        </div>
+
+        <div class="service-card">
+          <div class="icon">🔧</div>
+          <h3>Maintenance</h3>
+          <p>Preventive maintenance, filters, belts, coils, drains, electrical checks, pressures, and temperatures.</p>
+        </div>
+
+        <div class="service-card">
+          <div class="icon">🌡️</div>
+          <h3>Refrigeration</h3>
+          <p>Light commercial refrigeration diagnostics, temperature issues, leak checks, and system service.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="about">
+        <div class="dark-card">
+          <div class="eyebrow" style="color:#93c5fd;">About</div>
+          <h2>Hi, I’m Nano.</h2>
+
+          <p>
+            I’m a local HVAC/R technician serving the Kansas City metro area. My goal is to provide honest service, fair pricing, and reliable work for homes and businesses.
+          </p>
+
+          <div class="credentials">
+            <div class="credential">
+              <strong>NATE</strong>
+              <span>Certified Technician</span>
+            </div>
+
+            <div class="credential">
+              <strong>EPA</strong>
+              <span>Certified Technician</span>
+            </div>
+
+            <div class="credential">
+              <strong>OSHA</strong>
+              <span>Safety Trained</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="service-card" style="padding:32px;">
+          <div class="eyebrow">Why choose Ideal Climate</div>
+          <h2>Clean work. Clear communication. Reliable service.</h2>
+
+          <p style="font-size:16px; line-height:1.75; margin-top:16px;">
+            I service residential and commercial systems including air conditioning, heating, rooftop units, controls, electrical components, belts, filters, coils, and refrigeration equipment.
+          </p>
+
+          <p style="font-size:16px; line-height:1.75; margin-top:12px;">
+            Call, text, or send a WhatsApp message with the issue, photos if available, and your city to get started.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="section-title">
+        <div class="eyebrow">Service Area</div>
+        <h2>Serving the Kansas City metro</h2>
+        <p>Available for HVAC and refrigeration service across Missouri and Kansas.</p>
+      </div>
+
+      <div class="areas">
+        <span>Kansas City, MO</span>
+        <span>Kansas City, KS</span>
+        <span>Overland Park</span>
+        <span>Olathe</span>
+        <span>Lenexa</span>
+        <span>Shawnee</span>
+        <span>Leawood</span>
+        <span>Prairie Village</span>
+        <span>Independence</span>
+        <span>Lee’s Summit</span>
+        <span>Blue Springs</span>
+        <span>Raytown</span>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="contact-box">
+        <div>
+          <div class="eyebrow" style="color:#bfdbfe;">Contact</div>
+          <h2>Need HVAC/R service?</h2>
+          <p>
+            For fastest response, call, text, or send a WhatsApp message. Include your city, what the system is doing, and photos if available.
+          </p>
+        </div>
+
+        <div class="buttons">
+          <a class="btn btn-primary" style="background:white;color:#0f172a;" href="tel:+19133152795">Call Now</a>
+          <a class="btn btn-blue" style="background:#2563eb;" href="sms:+19133152795">Text Me</a>
+        </div>
+      </div>
+    </section>
+
+    <div class="footer">
+      © 2026 Ideal Climate HVAC & Refrigeration. Local HVAC/R contractor serving Kansas City, MO & KS.
+    </div>
+
+  </div>
+</body>
+</html>
